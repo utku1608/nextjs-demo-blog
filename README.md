@@ -1,40 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🧱 Next.js Demo Blog Uygulaması
 
-## Getting Started
+Bu proje, **SE 4458 - Software Architecture & Design of Modern Large-Scale Systems** dersi kapsamında hazırlanmıştır. Amaç, modern web sistemlerinde kullanılan Next.js framework'ünün temel mimari yeteneklerini tanıtmak ve çalışan bir örnekle göstermektir.
 
-First, run the development server:
+---
 
+## 🚀 Proje Özeti
+
+Bu uygulama, Next.js ile oluşturulmuş basit bir blog sistemidir.  
+Kullanılan özellikler sayesinde projenin SEO uyumlu, hızlı ve modüler bir yapıya sahip olması sağlanmıştır.
+
+---
+
+## 🔧 Kullanılan Next.js Özellikleri
+
+| Özellik | Açıklama |
+|--------|----------|
+| ✅ `getStaticProps()` | Anasayfada blog yazıları build sırasında statik olarak oluşturuluyor |
+| ✅ `getStaticPaths()` | Dinamik detay sayfaları URL’ye göre üretiliyor |
+| ✅ Dinamik Routing | `pages/posts/[id].js` → her yazı için detay sayfası |
+| ✅ CSR (Client-Side Rendering) | Yorum ekleme alanı sadece tarayıcıda çalışıyor |
+| ✅ API Routes | `/api/posts` → blog verilerini JSON olarak döndüren backend fonksiyonu |
+
+---
+
+## 🛠️ Projeyi Çalıştırmak
+
+### 1. Gerekli Kurulum
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📁 Klasör Yapısı
+nextjs-demo-blog/
+├── pages/
+│   ├── index.js           # Anasayfa (SSG ile blog listeleme)
+│   ├── posts/[id].js      # Dinamik blog detay sayfası
+│   └── api/posts.js       # API endpoint
+├── data/posts.js          # Sahte blog veri dosyası
+├── styles/                # Stil dosyaları (isteğe bağlı)
+├── public/                # Statik dosyalar
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+👨‍💻 Geliştirici
+Utku
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Yaşar Üniversitesi – Software Engineering
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+GitHub: @utku1608
